@@ -10,8 +10,7 @@ async function simularInvestimento() {
        console.log('Preencher campos corretamente para realizar a simulação!');
     } else {
         try {
-            let requisicao = await fetch('http://api.mathjs.org/v4/', {
-                referrerPolicy: "unsafe_url",
+            let requisicao = await fetch('https://api.mathjs.org/v4/', {
                 method: 'POST',
                 body: JSON.stringify({
                     expr: `${mensalidade.value} * (((1 + 0.00517) ^ (${tempoContribuicao.value} * 12) - 1) / 0.00517)`
