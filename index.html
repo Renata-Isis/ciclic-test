@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>Ciclic</title>
+</head>
+<body>
+    <div class="container-logo">
+        <h1 class="logo">Ciclic</h1>
+    </div>
+
+    <span class="simulador-text">Simulador</span>
+    
+    <div class="container">
+        <form onsubmit="simularInvestimento">
+            <label for="">Nome:</label>
+            <input type="text" name="nome" placeholder="Nome">
+
+            <label for="">Mensalidade:</label>
+            <input type="text" name="mensalidade" placeholder="Mensalidade">
+
+            <label>Tempo de contribuição:</label>
+            <select name="tempo-contribuicao" id="tempo-contribuicao">
+                <option value="1">1 ano</option>
+                <option value="2" >2 anos</option>
+                <option value="3">3 anos</option>
+                <option value="4">4 anos</option>
+                <option value="5">5 anos</option>
+            </select>
+
+            <div class="container-button">
+                <a class="botao-simular" href="" data-modal="abrir">Simular</a>
+            </div>
+
+        </form>
+       
+    </div>
+
+    <section class="modal-container" data-modal="container">
+        <div class="modal">
+
+          <button data-modal="fechar" class="fechar">X</button>
+
+          <div class="modal-info">
+
+          </div>
+
+          <div class="container-button">
+            <button data-modal="simular-novamente" class="botao-simular-novamente">Simular Novamente</button>
+          </div>
+
+        </div>
+
+    </section>
+
+    <script type="module" src="js/script.js"></script>
+</body>
+</html>
